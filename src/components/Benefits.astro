@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets'
+import workImage from '../assets/images/work-1.jpg'
+---
+
+<div class='flex gap-14'>
+  <div class="max-w-md">
+    <Image
+      src={workImage}
+      alt='เตรียมการกำจัดปลวก'
+      class='aspect-square object-cover grayscale'
+    />
+  </div>
+  <div class='flex-1 space-y-4 max-w-2xl'>
+    <h2 class='text-3xl font-bold'>
+      เราให้บริการกำจัดปลวกที่ดีที่สุด
+    </h2>
+
+    <p class='text-gray-600'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repudiandae
+      voluptas fugiat. Veritatis, quam maxime nobis beatae, facilis obcaecati
+      aspernatur officia asperiores, repellendus debitis labore perspiciatis. Ad
+      quaerat sit repellendus!
+    </p>
+  </div>
+</div>
