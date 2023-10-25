@@ -1,26 +1,58 @@
 ---
 import { Image } from 'astro:assets'
-import workImage from '../assets/images/work-1.jpg'
+import CheckIcon from './icons/CheckIcon.astro'
 ---
 
 <div class='flex gap-14'>
-  <div class="max-w-md">
+  <div class='max-w-md'>
     <Image
-      src={workImage}
+      src='https://placehold.co/600x400'
       alt='เตรียมการกำจัดปลวก'
-      class='aspect-square object-cover grayscale'
+      class='aspect-square object-cover'
+      width={600}
+      height={400}
     />
   </div>
-  <div class='flex-1 space-y-4 max-w-2xl'>
-    <h2 class='text-3xl font-bold'>
-      เราให้บริการกำจัดปลวกที่ดีที่สุด
-    </h2>
+  <div class='flex-1 flex flex-col justify-between'>
+    <div class='space-y-4 max-w-2xl'>
+      <h2 class='text-3xl font-bold tracking-wide'>
+        เราให้บริการกำจัดปลวกที่ดีที่สุด
+      </h2>
 
-    <p class='text-gray-600'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repudiandae
-      voluptas fugiat. Veritatis, quam maxime nobis beatae, facilis obcaecati
-      aspernatur officia asperiores, repellendus debitis labore perspiciatis. Ad
-      quaerat sit repellendus!
-    </p>
+      <p class='text-gray-600'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+        repudiandae voluptas fugiat. Veritatis, quam maxime nobis beatae,
+        facilis obcaecati aspernatur officia asperiores, repellendus debitis
+        labore perspiciatis. Ad quaerat sit repellendus!
+      </p>
+    </div>
+
+    <div class='flex gap-10 flex-col lg:flex-row items-center'>
+      <div class='p-8 space-y-4 grid place-content-center bg-gray-300'>
+        <p class='text-gray-900 text-sm tracking-wide'>ประสบการณ์กว่า</p>
+        <div class='text-gray-600 font-bold text-3xl text-center font-sans'>
+          10 ปี
+        </div>
+      </div>
+
+      <div class='flex flex-col gap-4 self-center'>
+        <div class='flex gap-2 items-center'>
+          <CheckIcon className='w-6 h-6' />
+          <p class='text-base text-gray-600'>บริการกำจัดปลวกครบวงจร</p>
+        </div>
+        <div class='flex gap-2 items-center'>
+          <CheckIcon className='w-6 h-6' />
+          <p class='text-base text-gray-600'>ประสบการณ์การกำจัดปลวกมากกว่า 10 ปี</p>
+        </div>
+        <div class='flex gap-2 items-center'>
+          <CheckIcon className='w-6 h-6' />
+          <p class='text-base text-gray-600'>ป้องกันและกำจัดปลวกอย่างมีประสิทธิภาพ</p>
+        </div>
+        <div class='flex gap-2 items-center'>
+          <CheckIcon className='w-6 h-6' />
+          <p class='text-base text-gray-600'>บริการอย่างรวดเร็วภายใน 24 ชม.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
