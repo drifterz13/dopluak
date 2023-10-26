@@ -503,11 +503,6 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.19.5.tgz#faad84c41ba12e3a0acb52571df9bff37bee75f6"
   integrity sha512-czTrygUsB/jlM8qEW5MD8bgYU2Xg14lo6kBDXW6HdxKjh8M5PzETGiSHaz9MtbXBYDloHNUAUW2tMiKW4KM9Mw==
 
-"@fontsource/prompt@^5.0.9":
-  version "5.0.9"
-  resolved "https://registry.yarnpkg.com/@fontsource/prompt/-/prompt-5.0.9.tgz#97bf755cd1a1372aa23d4eef4f5b69402df912e9"
-  integrity sha512-fbqRSdiqANQ2NiIWz5Fpj8xQ1exN9LmhDAaE6lU52InDYPABM2JQF0WObhv8tkwE/WZ4EzNZAGNJYSo5XUqUYA==
-
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
