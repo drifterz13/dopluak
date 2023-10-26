@@ -3,35 +3,37 @@ import { Image } from 'astro:assets'
 import CheckIcon from './icons/CheckIcon.astro'
 ---
 
-<div class='flex flex-col md:flex-row gap-0 md:gap-16'>
-  <div class='hidden relative md:block'>
-    <div class='max-w-md'>
-      <Image
-        src='https://placehold.co/600x400'
-        alt='เตรียมการกำจัดปลวก'
-        class='aspect-square object-cover blur-sm'
-        width={600}
-        height={400}
-      />
-    </div>
+<div class='flex flex-col lg:flex-row gap-0 md:gap-16'>
+  <div class='relative self-center lg:self-start'>
+    <Image
+      src='https://placehold.co/600x600'
+      alt='เตรียมการกำจัดปลวก'
+      class='blur-sm max-w-md'
+      width={600}
+      height={600}
+    />
 
-    <div class='absolute inset-10 bg-gray-900/40'>
+    <div class='absolute inset-10 aspect-square bg-gray-900/40 w-fit'>
       <div class='flex flex-col gap-4 h-full justify-center px-10'>
         <div class='flex w-full'>
-          <div class='px-4 py-3 bg-gray-900 text-white text-lg'>572+</div>
-          <div class='px-4 py-3 bg-gray-300 text-lg w-full'>
-            กำจัดปลวกสำเร็จแล้ว
+          <div class='px-4 py-3 bg-gray-900 text-white flex items-center'>
+            572+
           </div>
+          <div class='px-4 py-3 bg-gray-300 w-full'>กำจัดปลวกสำเร็จแล้ว</div>
         </div>
 
         <div class='flex w-full'>
-          <div class='px-4 py-3 bg-gray-900 text-white text-lg'>185+</div>
-          <div class='px-4 py-3 bg-gray-300 text-lg w-full'>ป้องกันปลวก</div>
+          <div class='px-4 py-3 bg-gray-900 text-white flex items-center'>
+            185+
+          </div>
+          <div class='px-4 py-3 bg-gray-300 w-full'>ป้องกันปลวก</div>
         </div>
 
         <div class='flex w-full'>
-          <div class='px-4 py-3 bg-gray-900 text-white text-lg'>385+</div>
-          <div class='px-4 py-3 bg-gray-300 text-lg w-full'>ลูกค้าที่ไว้ใจ</div>
+          <div class='px-4 py-3 bg-gray-900 text-white flex items-center'>
+            385+
+          </div>
+          <div class='px-4 py-3 bg-gray-300 w-full'>ลูกค้าที่ไว้ใจ</div>
         </div>
       </div>
     </div>
@@ -52,10 +54,10 @@ import CheckIcon from './icons/CheckIcon.astro'
 
     <ul class='flex flex-col gap-y-4'>
       <li class='flex gap-2'>
-        <CheckIcon className='w-7 h-7' />
+        <CheckIcon className='w-6 h-6' />
 
         <div>
-          <div class='text-lg font-bold'>10 ปี+ จากประสบการณ์จริง</div>
+          <div class="font-bold'">10 ปี+ จากประสบการณ์จริง</div>
           <p class='text-gray-700'>
             เมื่อคุณเลือกใช้บริการเรา
             คุณได้เลือกทศวรรษของประสบการณ์ที่เรามีในการกำจัดปลวก
@@ -64,10 +66,10 @@ import CheckIcon from './icons/CheckIcon.astro'
       </li>
 
       <li class='flex gap-2'>
-        <CheckIcon className='w-7 h-7' />
+        <CheckIcon className='w-6 h-6' />
 
         <div>
-          <div class='text-lg font-bold'>บริการที่รวดเร็ว</div>
+          <div class="font-bold'">บริการที่รวดเร็ว</div>
           <p class='text-gray-700'>
             ทีมงานดูปลวกสามารถเริ่มปฏิบัติการได้ทันทีภายใน 24 ชม.
             หลังจากที่คุณติดต่อเรา
@@ -76,10 +78,10 @@ import CheckIcon from './icons/CheckIcon.astro'
       </li>
 
       <li class='flex gap-2'>
-        <CheckIcon className='w-7 h-7' />
+        <CheckIcon className='w-6 h-6' />
 
         <div>
-          <div class='text-lg font-bold'>ราคาที่คุณสบายใจ</div>
+          <div class="font-bold'">ราคาที่คุณสบายใจ</div>
           <p class='text-gray-700'>
             คุณจะได้รับบริการที่ดีที่สุดจากทีมงานมืออาชีพของเราในราคาที่คุณพอใจ
           </p>
