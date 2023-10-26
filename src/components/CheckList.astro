@@ -13,7 +13,7 @@ const { className, items } = Astro.props
   {
     items.map((item) => (
       <li class='flex gap-2'>
-        <CheckIcon className='w-6 h-6' />
+        <CheckIcon className='w-6 h-6 shrink-0' />
 
         <div>
           {item.title ? <div class='font-bold'>{item.title}</div> : null}

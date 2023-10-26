@@ -24,7 +24,7 @@ const items = [
 ---
 
 <div class='flex flex-col lg:flex-row gap-0 md:gap-16'>
-  <div class='relative self-center lg:self-start'>
+  <div class='hidden md:block relative self-center lg:self-start'>
     <Image
       src='https://placehold.co/600x600'
       alt='เตรียมการกำจัดปลวก'
@@ -70,12 +70,3 @@ const items = [
     <CheckList items={items} />
   </div>
 </div>
-
-<style>
-  .cover-image {
-    background-image: url('https://placehold.co/600x400');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>
