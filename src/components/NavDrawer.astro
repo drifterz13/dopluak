@@ -1,0 +1,54 @@
+<div class='nav-drawer bg-white z-20'>
+  <ul class='flex flex-col px-8 py-6 gap-y-2 border-b border-zinc-500'>
+    <li class='py-2 w-full'>หน้าแรก</li>
+    <li class='py-2 w-full'>เกี่ยวกับเรา</li>
+    <li class='py-2 w-full'>บริการ</li>
+  </ul>
+
+  <div class='px-8 py-6'>
+    <button
+      class='p-5 box-border h-12 bg-gray-900 text-white flex items-center mr-auto ml-auto md:ml-auto md:mr-0'
+      >ติดต่อฉีดปลวก</button
+    >
+  </div>
+</div>
+
+<div class='drawer-overlay'></div>
+
+<style>
+  .nav-drawer {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .drawer-overlay {
+      display: none;
+    }
+
+    .drawer-overlay.active {
+      display: block;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      background-color: rgb(24 24 27 / 0.5);
+    }
+
+    .nav-drawer {
+      display: block;
+      position: fixed;
+      right: -100%;
+      top: 64px;
+      flex-direction: column;
+      width: 80%;
+      transition: 0.3s;
+      height: calc(100vh - 64px);
+    }
+
+    .nav-drawer.active {
+      right: 0;
+    }
+  }
+</style>

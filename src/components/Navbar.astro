@@ -7,33 +7,45 @@ import { Image } from 'astro:assets'
 import logo from '../assets/images/logo.svg'
 import PinIcon from './icons/PinIcon.astro'
 import MobileIcon from './icons/MobileIcon.astro'
+import Hamburger from './Hamburger.astro'
+import NavDrawer from './NavDrawer.astro'
 ---
 
 <div
-  class='px-[100px] h-10 box-border bg-gray-300 flex justify-between items-center'
+  class='px-layout-mobile md:px-layout h-fit pt-4 md:pt-0 box-border bg-gray-300 hidden md:flex flex-col md:flex-row justify-between items-center'
 >
-  <p class='text'>เวลาให้บริการ: จันทร์ - ศุกร์ 06:00 ถึง 20:00 น.</p>
-  <div class='flex gap-4'>
-    <FaceBookIcon className='w-[18px] h-[18px]' />
-    <LineIcon className='w-[18px] h-[18px]' />
-    <GmailIcon className='w-[18px] h-[18px]' />
+  <p class='text-sm md:text-base'>
+    เวลาให้บริการ: จันทร์ - ศุกร์ 06:00 ถึง 20:00 น.
+  </p>
+  <div class='flex'>
+    <div class='px-4 py-2 cursor-pointer'>
+      <FaceBookIcon className='w-4 h-4' />
+    </div>
+    <div class='px-4 py-2 cursor-pointer'>
+      <LineIcon className='w-4 h-4' />
+    </div>
+    <div class='px-4 py-2 cursor-pointer'>
+      <GmailIcon className='w-4 h-4' />
+    </div>
   </div>
 </div>
-<nav
-  class='h-32 bg-white box-border px-[100px] flex justify-between items-center'
+<div
+  class='h-fit md:h-32 bg-white box-border px-layout-mobile md:px-layout flex justify-between items-center'
 >
-  <Image src={logo} alt='โลโก้ ดูปลวก' class='w-20 h-20' />
+  <Image src={logo} alt='โลโก้ ดูปลวก' class='w-16 h-16 md:w-20 md:h-20' />
 
-  <div class='flex gap-x-10'>
+  <Hamburger />
+
+  <div class='hidden md:flex flex-col md:flex-row gap-3 md:gap-10'>
     <div class='flex gap-2.5 items-center'>
       <div
-        class='rounded-full bg-gray-400 box-border w-16 h-16 grid place-content-center'
+        class='rounded-full bg-gray-400 box-border w-10 h-10 md:w-16 md:h-16 grid place-content-center'
       >
-        <PinIcon className='w-8 h-8' />
+        <PinIcon className='w-4 h-4 md:w-8 md:h-8' />
       </div>
       <div class='flex flex-col flex-wrap max-w-[200px]'>
-        <p class='font-bold'>ที่อยู่</p>
-        <p class='text-gray-700 text-sm'>
+        <p class='font-bold text-sm md:text-base'>ที่อยู่</p>
+        <p class='text-gray-700 text-xs md:text-sm'>
           55 ซอยรามอินทรา 58 ถน​นรามอินทรา​ กรุงเทพ
         </p>
       </div>
@@ -41,26 +53,30 @@ import MobileIcon from './icons/MobileIcon.astro'
 
     <div class='flex gap-2.5 items-center'>
       <div
-        class='rounded-full bg-gray-400 box-border w-16 h-16 grid place-content-center'
+        class='rounded-full bg-gray-400 box-border w-10 h-10 md:w-16 md:h-16 grid place-content-center'
       >
-        <MobileIcon className='w-8 h-8' />
+        <MobileIcon className='w-4 h-4 md:w-8 md:h-8' />
       </div>
       <div class='flex flex-col flex-wrap max-w-[100px]'>
-        <p class='font-bold'>เบอร์โทร</p>
-        <p class='text-gray-700 text-sm'>065-253-9196</p>
+        <p class='font-bold text-sm md:text-base'>เบอร์โทร</p>
+        <p class='text-gray-700 text-xs md:text-sm'>065-253-9196</p>
       </div>
     </div>
   </div>
+</div>
+
+<nav class='hidden md:block bg-gray-300 px-0 md:px-layout'>
+  <ul class='flex flex-col md:flex-row items-center justify-between'>
+    <li class='px-4 py-5 w-full md:w-fit text-center bg-gray-700 text-white'>
+      หน้าแรก
+    </li>
+    <li class='px-4 py-5 w-full md:w-fit text-center'>เกี่ยวกับเรา</li>
+    <li class='px-4 py-5 w-full md:w-fit text-center'>บริการ</li>
+    <button
+      class='p-5 box-border h-12 bg-gray-900 text-white flex items-center mr-auto ml-auto md:ml-auto md:mr-0'
+      >ติดต่อฉีดปลวก</button
+    >
+  </ul>
 </nav>
 
-<div class='bg-gray-300 flex items-center justify-between px-[100px]'>
-  <ul class='flex'>
-    <li class='px-4 py-5 text-center bg-gray-700 text-white'>หน้าแรก</li>
-    <li class='px-4 py-5 text-center'>เกี่ยวกับเรา</li>
-    <li class='px-4 py-5 text-center'>บริการ</li>
-  </ul>
-
-  <button class='p-5 box-border h-12 bg-gray-900 text-white flex items-center'
-    >ติดต่อฉีดปลวก</button
-  >
-</div>
+<NavDrawer />

@@ -17,8 +17,41 @@ const { title } = Astro.props
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="font-prompt">
+  <body class='scroll'>
     <Navbar />
     <slot />
   </body>
+
+  <script>
+    import '../scripts/menu.js'
+  </script>
 </html>
+
+<style is:global>
+  body.scroll {
+    overflow-y: auto;
+  }
+
+  body {
+    overflow-y: hidden;
+  }
+
+  /* Register your custom font family and tell the browser where to find it. */
+  @font-face {
+    font-family: 'SukhumvitSet';
+    src:
+      url('/fonts/SukhumvitSet-Light.ttf') format('truetype'),
+      url('/fonts/SukhumvitSet-Thin.ttf') format('truetype'),
+      url('/fonts/SukhumvitSet-Text.ttf') format('truetype'),
+      url('/fonts/SukhumvitSet-Medium.ttf') format('truetype'),
+      url('/fonts/SukhumvitSet-SemiBold.ttf') format('truetype'),
+      url('/fonts/SukhumvitSet-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'SukhumvitSet', sans-serif;
+  }
+</style>
