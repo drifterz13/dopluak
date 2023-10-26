@@ -6,6 +6,8 @@ interface Props {
 const { className } = Astro.props
 ---
 
-<section class:list={['p-layout-mobile md:p-layout', className]}>
+<section
+  class:list={['p-layout-mobile sm:p-layout-tablet md:p-layout', className]}
+>
   <slot />
 </section>

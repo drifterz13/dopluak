@@ -7,6 +7,7 @@ export default {
     extend: {
       padding: {
         layout: '100px',
+        'layout-tablet': '50px',
         'layout-mobile': '25px',
       },
     },
