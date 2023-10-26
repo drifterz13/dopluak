@@ -1,6 +1,7 @@
 ---
 import Benefits from '../components/Benefits.astro'
 import Hero from '../components/Hero.astro'
+import OurServices from '../components/OurServices.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
@@ -9,6 +10,10 @@ import Layout from '../layouts/Layout.astro'
     <Hero />
     <section class='px-layout-mobile md:px-layout py-[50px] bg-white'>
       <Benefits />
+    </section>
+
+    <section class='px-layout-mobile md:px-layout py-[50px] bg-gray-100'>
+      <OurServices />
     </section>
   </main>
 </Layout>
