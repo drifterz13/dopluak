@@ -3,6 +3,7 @@ import Benefits from '../components/Benefits.astro'
 import Hero from '../components/Hero.astro'
 import OurServices from '../components/OurServices.astro'
 import RecentWork from '../components/RecentWork.astro'
+import SectionLayout from '../components/SectionLayout.astro'
 import WhyUs from '../components/WhyUs.astro'
 import Layout from '../layouts/Layout.astro'
 ---
@@ -10,19 +11,21 @@ import Layout from '../layouts/Layout.astro'
 <Layout title='Do Pluak (ดูปลวก) - เราให้บริการกำจัดปลวก'>
   <main>
     <Hero />
-    <section class='p-layout-mobile md:p-layout bg-white'>
+
+    <SectionLayout className='bg-white'>
       <Benefits />
-    </section>
+    </SectionLayout>
 
-    <section class='p-layout-mobile md:p-layout bg-gray-100'>
+    <SectionLayout className='bg-gray-100'>
       <OurServices />
-    </section>
+    </SectionLayout>
 
-    <section class='p-layout-mobile md:p-layout bg-white'>
+    <SectionLayout className='bg-white'>
       <WhyUs />
-    </section>
-    <section class='p-layout-mobile md:p-layout bg-gray-100'>
+    </SectionLayout>
+
+    <SectionLayout className='bg-gray-100'>
       <RecentWork />
-    </section>
+    </SectionLayout>
   </main>
 </Layout>
