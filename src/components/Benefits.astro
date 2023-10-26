@@ -1,6 +1,18 @@
 ---
 import { Image } from 'astro:assets'
-import CheckIcon from './icons/CheckIcon.astro'
+import SectionHeader from './SectionHeader.astro'
+import CheckList from './CheckList.astro'
+
+const title = 'เราให้บริการกำจัดปลวกที่ดีที่สุด'
+const description =
+  'เราเข้าใจดีว่าปัญหาปลวกสร้างความเดือดร้อนให้คุณ และสร้างความเสียหายให้กับบ้านของคุณ บางครั้งแม้จะทำการฉีดปลวกแล้ว ปลวกก็ยังกลับมาสร้างปัญหาให้คุณอีก แต่ปัญหาเหล่านี้จะหมดไป ด้วยประสบการณ์กว่า 10 ปี ที่มีของทีมงานดูปลวก เราสามารถกำจัดปัญหาปลวกของคุณได้อย่างตรงจุดและมีประสิทธิภาพ ทำให้ปลวกไม่มารบกวนใจคุณอีกต่อไป'
+
+const items = [
+  { text: 'บริการกำจัดปลวกครบวงจร' },
+  { text: 'ประสบการณ์การกำจัดปลวกมากกว่า 10 ปี' },
+  { text: 'ป้องกันและกำจัดปลวกอย่างมีประสิทธิภาพ' },
+  { text: 'บริการอย่างรวดเร็วภายใน 24 ชม.' },
+]
 ---
 
 <div class='flex flex-col lg:flex-row gap-16'>
@@ -13,38 +25,13 @@ import CheckIcon from './icons/CheckIcon.astro'
   />
 
   <div class='flex flex-col gap-4 md:gap-16 self-center'>
-    <div class='space-y-4 max-w-2xl'>
-      <h2 class='text-3xl font-bold tracking-wide'>
-        เราให้บริการกำจัดปลวกที่ดีที่สุด
-      </h2>
+    <SectionHeader>
+      <Fragment slot='title'>{title}</Fragment>
+      <Fragment slot='description'>
+        {description}
+      </Fragment>
+    </SectionHeader>
 
-      <p class='text-gray-600 tracking'>
-        เราเข้าใจดีว่าปัญหาปลวกสร้างความเดือดร้อนให้คุณ
-        และสร้างความเสียหายให้กับบ้านของคุณ บางครั้งแม้จะทำการฉีดปลวกแล้ว
-        ปลวกก็ยังกลับมาสร้างปัญหาให้คุณอีก แต่ปัญหาเหล่านี้จะหมดไป
-        ด้วยประสบการณ์กว่า 10 ปี ที่มีของทีมงานดูปลวก
-        เราสามารถกำจัดปัญหาปลวกของคุณได้อย่างตรงจุดและมีประสิทธิภาพ
-        ทำให้ปลวกไม่มารบกวนใจคุณอีกต่อไป
-      </p>
-    </div>
-
-    <div class='flex flex-col gap-4 self-start'>
-      <div class='flex gap-2 items-center'>
-        <CheckIcon className='w-6 h-6' />
-        <p class='text-gray-600'>บริการกำจัดปลวกครบวงจร</p>
-      </div>
-      <div class='flex gap-2 items-center'>
-        <CheckIcon className='w-6 h-6' />
-        <p class='text-gray-600'>ประสบการณ์การกำจัดปลวกมากกว่า 10 ปี</p>
-      </div>
-      <div class='flex gap-2 items-center'>
-        <CheckIcon className='w-6 h-6' />
-        <p class='text-gray-600'>ป้องกันและกำจัดปลวกอย่างมีประสิทธิภาพ</p>
-      </div>
-      <div class='flex gap-2 items-center'>
-        <CheckIcon className='w-6 h-6' />
-        <p class='text-gray-600'>บริการอย่างรวดเร็วภายใน 24 ชม.</p>
-      </div>
-    </div>
+    <CheckList items={items} />
   </div>
 </div>

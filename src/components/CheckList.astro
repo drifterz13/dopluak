@@ -1,0 +1,25 @@
+---
+import CheckIcon from './icons/CheckIcon.astro'
+
+interface Props {
+  className?: string
+  items: { title?: string; text: string }[]
+}
+
+const { className, items } = Astro.props
+---
+
+<ul class:list={['flex flex-col gap-4 self-start', className]}>
+  {
+    items.map((item) => (
+      <li class='flex gap-2'>
+        <CheckIcon className='w-6 h-6' />
+
+        <div>
+          {item.title ? <div class='font-bold'>{item.title}</div> : null}
+          <p class='text-gray-600'>{item.text}</p>
+        </div>
+      </li>
+    ))
+  }
+</ul>

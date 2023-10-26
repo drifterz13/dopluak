@@ -1,0 +1,17 @@
+---
+interface Props {
+  className?: string
+}
+
+const { className } = Astro.props
+---
+
+<div class:list={['space-y-4 max-w-2xl', className]}>
+  <h2 class='text-3xl font-bold tracking-wide'>
+    <slot name='title' />
+  </h2>
+
+  <p class='text-gray-600 tracking'>
+    <slot name='description' />
+  </p>
+</div>

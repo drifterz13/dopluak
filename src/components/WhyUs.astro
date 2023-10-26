@@ -1,6 +1,26 @@
 ---
 import { Image } from 'astro:assets'
-import CheckIcon from './icons/CheckIcon.astro'
+import SectionHeader from './SectionHeader.astro'
+import CheckList from './CheckList.astro'
+
+const title = 'เหตุผลที่คุณควรเลือกใช้บริการ "ดูปลวก"'
+const description =
+  'การหาเพื่อนคู่ใจของคุณที่พร้อมช่วยคุณจัดการปัญหาเรื่องปลวกไม่ใช่เรื่องง่าย โดยเฉพาะในขณะนี้ที่มีทางเลือกในการกำจัดปลวกอยู่มากมาย สิ่งที่ทำให้ทีมงานดูปลวกของเราแตกต่างคือความมุ่งมัน และการทำงานที่มีประสิทธิภาพเพื่อความเป็นอยู่ที่ดีของคุณ'
+
+const items = [
+  {
+    title: '10 ปี+ จากประสบการณ์จริง',
+    text: 'เมื่อคุณเลือกใช้บริการกับเรา คุณได้เลือกทศวรรษของประสบการณ์ที่เรามีในการกำจัดปลวก',
+  },
+  {
+    title: 'บริการที่รวดเร็ว',
+    text: 'ทีมงานดูปลวกสามารถเริ่มปฏิบัติการได้ทันทีภายใน 24 ชม. หลังจากที่คุณติดต่อเรา',
+  },
+  {
+    title: 'ราคาที่คุณสบายใจ',
+    text: 'คุณจะได้รับบริการที่ดีที่สุดจากทีมงานมืออาชีพของเราในราคาที่คุณพอใจ',
+  },
+]
 ---
 
 <div class='flex flex-col lg:flex-row gap-0 md:gap-16'>
@@ -40,54 +60,14 @@ import CheckIcon from './icons/CheckIcon.astro'
   </div>
 
   <div class='space-y-16 self-center h-full'>
-    <div class='space-y-4 max-w-2xl'>
-      <h3 class='text-3xl font-bold tracking-wide'>
-        เหตุผลที่คุณควรเลือกใช้บริการ "ดูปลวก"
-      </h3>
-      <p>
-        การหาเพื่อนคู่ใจของคุณที่พร้อมช่วยคุณจัดการปัญหาเรื่องปลวกไม่ใช่เรื่องง่าย
-        โดยเฉพาะในขณะนี้ที่มีทางเลือกในการกำจัดปลวกอยู่มากมาย
-        สิ่งที่ทำให้ทีมงานดูปลวกของเราแตกต่างคือความมุ่งมัน
-        และการทำงานที่มีประสิทธิภาพเพื่อความเป็นอยู่ที่ดีของคุณ
-      </p>
-    </div>
+    <SectionHeader>
+      <Fragment slot='title'>{title}</Fragment>
+      <Fragment slot='description'>
+        {description}
+      </Fragment>
+    </SectionHeader>
 
-    <ul class='flex flex-col gap-y-4'>
-      <li class='flex gap-2'>
-        <CheckIcon className='w-6 h-6' />
-
-        <div>
-          <div class="font-bold'">10 ปี+ จากประสบการณ์จริง</div>
-          <p class='text-gray-700'>
-            เมื่อคุณเลือกใช้บริการเรา
-            คุณได้เลือกทศวรรษของประสบการณ์ที่เรามีในการกำจัดปลวก
-          </p>
-        </div>
-      </li>
-
-      <li class='flex gap-2'>
-        <CheckIcon className='w-6 h-6' />
-
-        <div>
-          <div class="font-bold'">บริการที่รวดเร็ว</div>
-          <p class='text-gray-700'>
-            ทีมงานดูปลวกสามารถเริ่มปฏิบัติการได้ทันทีภายใน 24 ชม.
-            หลังจากที่คุณติดต่อเรา
-          </p>
-        </div>
-      </li>
-
-      <li class='flex gap-2'>
-        <CheckIcon className='w-6 h-6' />
-
-        <div>
-          <div class="font-bold'">ราคาที่คุณสบายใจ</div>
-          <p class='text-gray-700'>
-            คุณจะได้รับบริการที่ดีที่สุดจากทีมงานมืออาชีพของเราในราคาที่คุณพอใจ
-          </p>
-        </div>
-      </li>
-    </ul>
+    <CheckList items={items} />
   </div>
 </div>
 
