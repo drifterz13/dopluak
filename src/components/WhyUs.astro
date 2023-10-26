@@ -1,0 +1,89 @@
+---
+import CheckIcon from './icons/CheckIcon.astro'
+---
+
+<div class='flex flex-col md:flex-row gap-0 md:gap-14'>
+  <div class='relative max-w-md w-full hidden md:block'>
+    <div class='cover-image absolute inset-0 blur-sm'></div>
+    <div class='absolute inset-10 bg-gray-900/40'>
+      <div class='flex flex-col gap-4 h-full justify-center px-10'>
+        <div class='flex w-full'>
+          <div class='px-4 py-3 bg-gray-900 text-white text-lg'>572+</div>
+          <div class='px-4 py-3 bg-gray-300 text-lg w-full'>
+            กำจัดปลวกสำเร็จแล้ว
+          </div>
+        </div>
+
+        <div class='flex w-full'>
+          <div class='px-4 py-3 bg-gray-900 text-white text-lg'>185+</div>
+          <div class='px-4 py-3 bg-gray-300 text-lg w-full'>ป้องกันปลวก</div>
+        </div>
+
+        <div class='flex w-full'>
+          <div class='px-4 py-3 bg-gray-900 text-white text-lg'>385+</div>
+          <div class='px-4 py-3 bg-gray-300 text-lg w-full'>ลูกค้าที่ไว้ใจ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='space-y-8 self-center h-full'>
+    <div class='space-y-4 max-w-2xl'>
+      <h3 class='text-3xl font-bold tracking-wide'>
+        เหตุผลที่คุณควรเลือกใช้บริการ "ดูปลวก"
+      </h3>
+      <p>
+        การหาเพื่อนคู่ใจของคุณที่พร้อมช่วยคุณจัดการปัญหาเรื่องปลวกไม่ใช่เรื่องง่าย
+        โดยเฉพาะในขณะนี้ที่มีทางเลือกในการกำจัดปลวกอยู่มากมาย
+        สิ่งที่ทำให้ทีมงานดูปลวกของเราแตกต่างคือความมุ่งมัน
+        และการทำงานที่มีประสิทธิภาพเพื่อความเป็นอยู่ที่ดีของคุณ
+      </p>
+    </div>
+
+    <ul class='flex flex-col gap-y-4'>
+      <li class='flex gap-2'>
+        <CheckIcon className='w-7 h-7' />
+
+        <div>
+          <div class='text-lg font-bold'>10 ปี+ จากประสบการณ์จริง</div>
+          <p class='text-gray-700'>
+            เมื่อคุณเลือกใช้บริการเรา
+            คุณได้เลือกทศวรรษของประสบการณ์ที่เรามีในการกำจัดปลวก
+          </p>
+        </div>
+      </li>
+
+      <li class='flex gap-2'>
+        <CheckIcon className='w-7 h-7' />
+
+        <div>
+          <div class='text-lg font-bold'>บริการที่รวดเร็ว</div>
+          <p class='text-gray-700'>
+            ทีมงานดูปลวกสามารถเริ่มปฏิบัติการได้ทันทีภายใน 24 ชม.
+            หลังจากที่คุณติดต่อเรา
+          </p>
+        </div>
+      </li>
+
+      <li class='flex gap-2'>
+        <CheckIcon className='w-7 h-7' />
+
+        <div>
+          <div class='text-lg font-bold'>ราคาที่คุณสบายใจ</div>
+          <p class='text-gray-700'>
+            คุณจะได้รับบริการที่ดีที่สุดจากทีมงานมืออาชีพของเราในราคาที่คุณพอใจ
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .cover-image {
+    background-image: url('https://placehold.co/600x400');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
