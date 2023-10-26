@@ -2,24 +2,40 @@
 interface Props {
   planName: string
   price: number
+  recommended?: boolean
 }
 
-const { planName, price } = Astro.props
+const { planName, price, recommended } = Astro.props
 ---
 
-<div class='flex flex-col p-10 bg-gray-100 w-[350px] h-[520px] box-border'>
-  <div class='space-y-2'>
-    <div class='text-xl font-bold'>{planName}</div>
-    <div class='text-3xl font-bold'>{price} บาท</div>
-  </div>
+<div
+  class:list={[
+    'relative',
+    { 'border border-2 border-zinc-700': !!recommended },
+  ]}
+>
+  {
+    recommended && (
+      <div class='absolute px-3 py-1 top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-zinc-900 text-white text-sm rounded'>
+        เป็นที่นิยม
+      </div>
+    )
+  }
 
-  <div class='h-[1px] w-full bg-zinc-400 my-8'></div>
+  <div class='flex flex-col p-10 bg-gray-100 w-auto md:w-[350px] h-[520px] box-border'>
+    <div class='space-y-2'>
+      <div class='text-xl font-bold'>{planName}</div>
+      <div class='text-3xl font-bold'>{price} บาท</div>
+    </div>
 
-  <slot name='features' />
+    <div class='h-[1px] w-full bg-zinc-400 my-8'></div>
 
-  <div class='mt-auto'>
-    <button class='py-4 px-8 box-border w-full bg-zinc-900 text-white'
-      >ติตต่อเรา</button
-    >
+    <slot name='features' />
+
+    <div class='mt-auto'>
+      <button class='py-4 px-8 box-border w-full bg-zinc-900 text-white'
+        >ติตต่อเรา</button
+      >
+    </div>
   </div>
 </div>
