@@ -2,6 +2,7 @@
 import Benefits from '../components/Benefits.astro'
 import Hero from '../components/Hero.astro'
 import OurServices from '../components/OurServices.astro'
+import RecentWork from '../components/RecentWork.astro'
 import WhyUs from '../components/WhyUs.astro'
 import Layout from '../layouts/Layout.astro'
 ---
@@ -9,16 +10,19 @@ import Layout from '../layouts/Layout.astro'
 <Layout title='Do Pluak (ดูปลวก) - เราให้บริการกำจัดปลวก'>
   <main>
     <Hero />
-    <section class='px-layout-mobile md:px-layout py-[50px] bg-white'>
+    <section class='p-layout-mobile md:p-layout bg-white'>
       <Benefits />
     </section>
 
-    <section class='px-layout-mobile md:px-layout py-[50px] bg-gray-100'>
+    <section class='p-layout-mobile md:p-layout bg-gray-100'>
       <OurServices />
     </section>
 
-    <section class='px-layout-mobile md:px-layout py-[50px] bg-white'>
+    <section class='p-layout-mobile md:p-layout bg-white'>
       <WhyUs />
+    </section>
+    <section class='p-layout-mobile md:p-layout bg-gray-100'>
+      <RecentWork />
     </section>
   </main>
 </Layout>

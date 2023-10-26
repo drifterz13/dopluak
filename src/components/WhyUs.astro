@@ -1,10 +1,20 @@
 ---
+import { Image } from 'astro:assets'
 import CheckIcon from './icons/CheckIcon.astro'
 ---
 
-<div class='flex flex-col md:flex-row gap-0 md:gap-14'>
-  <div class='relative max-w-md w-full hidden md:block'>
-    <div class='cover-image absolute inset-0 blur-sm'></div>
+<div class='flex flex-col md:flex-row gap-0 md:gap-16'>
+  <div class='hidden relative md:block'>
+    <div class='max-w-md'>
+      <Image
+        src='https://placehold.co/600x400'
+        alt='เตรียมการกำจัดปลวก'
+        class='aspect-square object-cover blur-sm'
+        width={600}
+        height={400}
+      />
+    </div>
+
     <div class='absolute inset-10 bg-gray-900/40'>
       <div class='flex flex-col gap-4 h-full justify-center px-10'>
         <div class='flex w-full'>
@@ -27,7 +37,7 @@ import CheckIcon from './icons/CheckIcon.astro'
     </div>
   </div>
 
-  <div class='space-y-8 self-center h-full'>
+  <div class='space-y-16 self-center h-full'>
     <div class='space-y-4 max-w-2xl'>
       <h3 class='text-3xl font-bold tracking-wide'>
         เหตุผลที่คุณควรเลือกใช้บริการ "ดูปลวก"

@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       padding: {
-        layout: '100px',
+        layout: '200px',
         'layout-mobile': '25px',
       },
     },
