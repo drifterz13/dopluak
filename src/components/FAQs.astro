@@ -1,0 +1,45 @@
+---
+import Accordion from './Accordion.astro'
+import SectionHeader from './SectionHeader.astro'
+
+const title = 'คำถามพี่พบเจอบ่อย'
+
+const faqs = [
+  {
+    title: 'ทีมงานดูปลวกรับกำจัดแมลงประเภทอื่นด้วยหรือไม่ ?',
+    content:
+      'เราครอบคลุมการกำจัดและป้องกันแมลงประเภทอื่นที่สร้างความเสียหายให้กับที่อยู่อาศัยของคุณอีกด้วย',
+  },
+  {
+    title: 'ที่อยู่อาศัยควรได้รับการป้องกันปลวกบ่อยแค่ไหน ?',
+    content:
+      'โดยทั่วไปแล้ว ที่อยู่อาศัยควรได้รับการฉีดป้องกันปลวกทุก 6 เดือน หากเคยมีปัญหาเรื่องปลวกมาก่อน',
+  },
+  {
+    title: 'ต้องย้ายสิ่งของภายในที่อยู่อาศัยหรือไม่เวลารับบริการกำจัดปลวก ?',
+    content:
+      'โดยทั่วไปแล้วไม่จำเป็น แต่สำหรับกรณีพิเศษบางกรณีที่จำเป็นต้องย้ายสิ่งของ เราจะแจ้งคุณให้ทราบล่วงหน้า',
+  },
+]
+---
+
+<div class='flex flex-col md:grid md:grid-cols-2 gap-6'>
+  <SectionHeader className='text-center md:text-left'>
+    <Fragment slot='title'>{title}</Fragment>
+    <Fragment slot='description'>
+      <span
+        >หากคุณทีคำถามนอกเหนือจากนี้ กรุณาติดต่อเราทาง <a
+          href='https://www.facebook.com/Dupluak'>Facebook</a
+        > หรือ โทร <a href='tel:+66652539196'>065-253-9196</a>
+      </span>
+    </Fragment>
+  </SectionHeader>
+
+  <div>
+    {
+      faqs.map((faq, idx) => (
+        <Accordion title={faq.title} content={faq.content} order={idx + 1} />
+      ))
+    }
+  </div>
+</div>

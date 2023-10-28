@@ -1,5 +1,6 @@
 ---
 import Benefits from '../components/Benefits.astro'
+import FAQs from '../components/FAQs.astro'
 import Hero from '../components/Hero.astro'
 import OurServices from '../components/OurServices.astro'
 import PricingPlan from '../components/PricingPlan.astro'
@@ -29,8 +30,12 @@ import Layout from '../layouts/Layout.astro'
       <RecentWork />
     </SectionLayout>
 
-    <SectionLayout>
+    <SectionLayout className='bg-white'>
       <PricingPlan />
+    </SectionLayout>
+
+    <SectionLayout className='bg-gray-100'>
+      <FAQs />
     </SectionLayout>
   </main>
 </Layout>

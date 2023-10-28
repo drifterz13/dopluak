@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string
+  content: string
+  order: number
+}
+
+const { title, content, order } = Astro.props
+---
+
+<div
+  class:list={[
+    'accordion text-gray-600 border-t border-gray-400 p-4',
+    { 'border-b': order > 1 },
+  ]}
+>
+  <div class='flex items-center justify-between gap-2 cursor-pointer'>
+    <h3 class='text-gray-900 text-base md:text-lg font-bold'>{title}</h3>
+    <svg
+      class='accordion-icon w-6 h-6 transform transition-transform'
+      viewBox='0 0 24 24'
+    >
+      <path
+        fill='currentColor'
+        d='M16.59 8.59L12 13.17L7.41 8.59L6 10L12 16L18 10L16.59 8.59Z'></path>
+    </svg>
+  </div>
+  <div class='accordion-content pt-4'>
+    {content}
+  </div>
+</div>
+
+<style>
+  .accordion-content {
+    display: none;
+  }
+
+  .accordion.open .accordion-content {
+    display: block;
+  }
+
+  .accordion.open .accordion-icon {
+    transform: rotate(180deg);
+  }
+</style>
