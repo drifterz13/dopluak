@@ -5,62 +5,52 @@ import GmailIcon from './icons/GmailIcon.astro'
 import MobileIcon from './icons/MobileIcon.astro'
 ---
 
-<div class='grid grid-cols-1 md:grid-cols-2'>
-  <div class='flex flex-col'>
+<div class='space-y-6'>
+  <div class='grid grid-cols-1 md:grid-cols-2'>
     <div class='flex flex-col w-full md:w-[263px] max-md:items-center'>
       <Image src={logo} alt='Do Pluak logo' width={80} />
 
-      <div
-        class='text-gray-600 text-base font-light leading-normal mt-2 max-md:text-center'
-      >
-        <span class='font-bold'>Do Pluak</span>
-        <span class='font-light'>
-          บริษัทกำจัดปลวกที่ลูกค้าไว้ใจ มีประสบการณ์มากกว่า 10 ปี
-        </span>
+      <div class='mt-2 max-md:text-center'>
+        <span class='text-gray-900 font-bold'>Do Pluak</span>
+        <span class='text-gray-600'
+          >{' '}บริษัทกำจัดปลวกที่ลูกค้าไว้ใจ มีประสบการณ์มากกว่า 10 ปี</span
+        >
       </div>
     </div>
-    <div
-      class='text-gray-600 font-light leading-normal mt-6 max-md:text-center'
-    >
-      Copyright © 2023 | Do Pluak | All Rights Reserved
+
+    <div class='flex gap-16 justify-end max-md:mt-6 max-md:justify-between'>
+      <div class='flex flex-col'>
+        <div class='flex flex-col items-start'>
+          <div class='text-gray-900 text-base font-bold'>สำรวจเพิ่มเติม</div>
+          <a href='/about' class='text-gray-600 mt-4'> เกี่ยวกับเรา</a>
+          <a href='/services' class='text-gray-600 mt-4'> บริการของเรา</a>
+          <a href='/contact-us' class='text-gray-600 mt-4'> ติดต่อเรา</a>
+        </div>
+      </div>
+      <div class='flex flex-col gap-6'>
+        <div class='text-gray-900 text-base font-bold'>
+          ข้อมูลติดต่อเพิ่มเติม
+        </div>
+        <div class='flex items-start gap-2'>
+          <GmailIcon className='w-5 h-5' />
+
+          <div class='text-gray-600'>
+            <a href='mailto:dupluak@gmail.com'>dupluak@gmail.com</a>
+          </div>
+        </div>
+
+        <div class='flex items-start gap-2'>
+          <MobileIcon className='w-5 h-5' />
+
+          <div class='text-gray-600'>
+            <a href='tel:+66652539196'>065-253-9196</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class='flex gap-16 justify-end max-md:mt-6 max-md:justify-between'>
-    <div class='flex flex-col'>
-      <div class='items-start flex flex-col'>
-        <div class='text-gray-900 text-base font-bold leading-normal'>
-          สำรวจเพิ่มเติม
-        </div>
-        <div class='text-gray-600 text-base font-medium leading-normal mt-4'>
-          เกี่ยวกับเรา
-        </div>
-        <div class='text-gray-600 text-base font-medium leading-normal mt-4'>
-          บริการของเรา
-        </div>
-        <div class='text-gray-600 text-base font-medium leading-normal mt-4'>
-          ติดต่อเรา
-        </div>
-      </div>
-    </div>
-    <div class='flex flex-col gap-6'>
-      <div class='text-gray-900 text-base font-bold leading-normal'>
-        ข้อมูลติดต่อเพิ่มเติม
-      </div>
-      <div class='flex items-start gap-2'>
-        <GmailIcon className='w-5 h-5' />
 
-        <div class='text-gray-600 text-base font-medium leading-normal'>
-          <a href='mailto:dupluak@gmail.com'>dupluak@gmail.com</a>
-        </div>
-      </div>
-
-      <div class='flex items-start gap-2'>
-        <MobileIcon className='w-5 h-5' />
-
-        <div class='text-gray-600 text-base font-medium leading-normal'>
-          <a href='tel:+66652539196'>065-253-9196</a>
-        </div>
-      </div>
-    </div>
+  <div class='text-gray-600 font-light mt-6 max-md:text-center'>
+    Copyright © 2023 | Do Pluak | All Rights Reserved
   </div>
 </div>
