@@ -1,68 +1,13 @@
 ---
-import { Image } from 'astro:assets'
-import SectionHeader from '../components/SectionHeader.astro'
 import SectionLayout from '../components/SectionLayout.astro'
 import Layout from '../layouts/Layout.astro'
-
-const title = 'พบกับทีมงานดูปลวก'
-const description =
-  'พวกเราคือทีมงานผู้เชี่ยวชาญในการกำจัดปลวกที่มีประสบการณ์มากกว่า 10 ปี นอกจากการกำจัดปลวก เรายังให้ความสำคัญกับความปลอดภัยของลูกค้า และคำนึงถึงสิ่งแวดล้อมเป็นอันดับแรก'
+import OurTeam from '../components/OurTeam.astro'
 ---
 
 <Layout title='เกี่ยวกับเรา'>
   <main>
     <SectionLayout>
-      <SectionHeader className='text-center mx-auto'>
-        <Fragment slot='title'>{title}</Fragment>
-        <Fragment slot='description'>{description}</Fragment>
-      </SectionHeader>
-
-      <div class='grid grid-cols-1 md:grid-cols-3 gap-6 mt-16'>
-        <div class='p-5 border border-gray-200 self-center'>
-          <Image
-            src='https://placehold.co/200x250'
-            class='object-cover bg-white w-full'
-            alt='ผู้เชี่ยวชาญด้านการกำจัดปลวก'
-            width={200}
-            height={250}
-          />
-
-          <div class='mt-6 space-y-2 text-center'>
-            <div class='text-gray-900 text-lg font-bold'>John Lennon</div>
-            <div class='text-gray-600'>ผู้เชี่ยวชาญด้านการกำจัดปลวก</div>
-          </div>
-        </div>
-
-        <div class='p-5 border border-gray-200'>
-          <Image
-            src='https://placehold.co/200x250'
-            class='object-cover bg-white w-full'
-            alt='ผู้เชี่ยวชาญด้านการกำจัดปลวก'
-            width={200}
-            height={250}
-          />
-
-          <div class='mt-6 space-y-2 text-center'>
-            <div class='text-gray-900 text-lg font-bold'>John Mayer</div>
-            <div class='text-gray-600'>ผู้เชี่ยวชาญด้านการกำจัดปลวก</div>
-          </div>
-        </div>
-
-        <div class='p-5 border border-gray-200'>
-          <Image
-            src='https://placehold.co/200x250'
-            class='object-cover bg-white w-full'
-            alt='ผู้เชี่ยวชาญด้านการกำจัดปลวก'
-            width={200}
-            height={250}
-          />
-
-          <div class='mt-6 space-y-2 text-center'>
-            <div class='text-gray-900 text-lg font-bold'>John Wick</div>
-            <div class='text-gray-600'>ผู้เชี่ยวชาญด้านการกำจัดปลวก</div>
-          </div>
-        </div>
-      </div>
+      <OurTeam />
     </SectionLayout>
   </main>
 </Layout>
