@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+  title: string
+  description: string
+  imgSrc: string
+}
+
+const { title, description, imgSrc } = Astro.props
+---
+
+<div class='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16'>
+  <Image
+    src={imgSrc}
+    class='object-cover bg-white w-fit lg:w-full'
+    alt='งานกำจัดปลวก'
+    width={300}
+    height={300}
+  />
+
+  <div class='space-y-4'>
+    <slot name='icon' />
+
+    <div class='space-y-4'>
+      <div class='text-2xl bold'>{title}</div>
+      <p class='tracking-wide leading-relaxed'>
+        {description}
+      </p>
+    </div>
+  </div>
+</div>
