@@ -1,0 +1,67 @@
+---
+import SectionHeader from './SectionHeader.astro'
+
+const title = 'ติดต่อทีมงานดูปลวก'
+const description =
+  'ติดต่อทีมงานดูปลวกได้โดยการกรอกแบบฟอร์มด้านล่าง เราจะติดต่อคุณกลับภายใน 24 ชั่วโมง'
+---
+
+<SectionHeader className='text-center mx-auto'>
+  <Fragment slot='title'>{title}</Fragment>
+  <Fragment slot='description'>{description}</Fragment>
+</SectionHeader>
+
+<div class='mt-16 mx-auto max-w-md'>
+  <div class='grid grid-cols-1 gap-6'>
+    <label for='fullname'>
+      <span class='text-gray-600'>ชื่อ-นามสกุล</span>
+      <input
+        type='text'
+        name='fullname'
+        id='fullname'
+        placeholder='John Doe'
+        class='mt-1 block w-full'
+      />
+    </label>
+
+    <label for='email'>
+      <span class='text-gray-600'>อีเมล</span>
+      <input
+        type='email'
+        name='email'
+        id='email'
+        placeholder='example@gmail.com'
+        class='mt-1 block w-full'
+      />
+    </label>
+
+    <label for='phone'>
+      <span class='text-gray-600'>เบอร์โทร</span>
+      <input
+        type='tel'
+        name='phone'
+        id='phone'
+        placeholder='091-234-5678'
+        class='mt-1 block w-full'
+      />
+    </label>
+
+    <label for='comments'>
+      <span class='text-gray-600'>คำขออื่นๆ</span>
+      <textarea
+        name='comments'
+        id='comments'
+        placeholder='คำร้องขออื่นๆ ที่ต้องการส่งให้ทีมงานดูปลวก'
+        rows='3'
+        class='mt-1 block w-full'></textarea>
+    </label>
+
+    <div class='w-full flex justify-center'>
+      <button
+        type='button'
+        class='text-center px-5 py-2.5 h-12 box-border bg-gray-900 text-white w-full md:w-[165px]'
+        >ส่งคำร้อง</button
+      >
+    </div>
+  </div>
+</div>
