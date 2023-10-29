@@ -10,8 +10,8 @@ const { title, content, order } = Astro.props
 
 <div
   class:list={[
-    'accordion text-gray-600 border-t border-gray-400 p-4',
-    { 'border-b': order > 1 },
+    'accordion text-gray-600 border-b border-gray-200 p-4',
+    { 'border-t': order === 1 },
   ]}
 >
   <div class='flex items-center justify-between gap-2 cursor-pointer'>
