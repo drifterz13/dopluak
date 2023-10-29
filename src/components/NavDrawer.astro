@@ -1,3 +1,9 @@
+---
+import FaceBookIcon from './icons/FaceBookIcon.astro'
+import GmailIcon from './icons/GmailIcon.astro'
+import LineIcon from './icons/LineIcon.astro'
+---
+
 <div class='nav-drawer bg-white z-20'>
   <div class='pl-8 h-16 box-border w-full flex justify-end'>
     <button class='close-btn py-2 px-6'>
@@ -17,7 +23,7 @@
     </button>
   </div>
 
-  <ul class='flex flex-col px-8 pb-6 gap-y-2 border-b border-zinc-500'>
+  <ul class='flex flex-col px-8 pb-6 gap-y-2 border-b border-gray-200'>
     <li class='py-2 w-full'>
       <a href='/'>หน้าแรก</a>
     </li>
@@ -27,6 +33,21 @@
     <li class='py-2 w-full'>
       <a href='/services/'>บริการของเรา</a>
     </li>
+  </ul>
+
+  <ul class='flex px-8 py-6 border-b border-gray-200'>
+    <a href='https://www.facebook.com/Dupluak' class='px-4 py-2 cursor-pointer'>
+      <FaceBookIcon className='w-6 h-6' />
+    </a>
+    <a
+      href='https://liff.line.me/1645278921-kWRPP32q/?accountId=950ycdxu'
+      class='px-4 py-2 cursor-pointer'
+    >
+      <LineIcon className='w-6 h-6' />
+    </a>
+    <a href='mailto:dupluak@gmail.com' class='px-4 py-2 cursor-pointer'>
+      <GmailIcon className='w-6 h-6' />
+    </a>
   </ul>
 
   <div class='px-8 py-6'>
