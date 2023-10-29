@@ -14,7 +14,7 @@ const pathname = new URL(Astro.request.url).pathname
 ---
 
 <div
-  class='px-layout-mobile md:px-layout h-fit pt-4 md:pt-0 box-border bg-gray-300 hidden md:flex flex-col md:flex-row justify-between items-center'
+  class='px-6 md:px-layout h-fit pt-4 md:pt-0 box-border bg-gray-300 hidden md:flex flex-col md:flex-row justify-between items-center'
 >
   <p class='text-sm md:text-base'>
     เวลาให้บริการ: จันทร์ - ศุกร์ 06:00 ถึง 20:00 น.
@@ -44,38 +44,32 @@ const pathname = new URL(Astro.request.url).pathname
   <div class='hidden md:flex flex-col md:flex-row gap-3 md:gap-10'>
     <div class='flex gap-2.5 items-center'>
       <div
-        class='rounded-full bg-gray-400 box-border w-8 h-8 md:w-12 md:h-12 grid place-content-center'
+        class='rounded-full bg-gray-400 box-border w-8 h-8 md:w-10 md:h-10 grid place-content-center'
       >
         <PinIcon className='w-4 h-4 md:w-6 md:h-6' />
       </div>
-      <div class='flex flex-col flex-wrap max-w-[200px]'>
-        <p class='font-bold text-sm md:text-base'>ที่อยู่</p>
-        <p class='text-gray-700 text-xs md:text-sm'>
-          55 ซอยรามอินทรา 58 ถน​นรามอินทรา​ กรุงเทพ
-        </p>
-      </div>
+      <p class='text-gray-900 text-xs md:text-sm max-w-[180px]'>
+        55 ซอยรามอินทรา 58 ถน​นรามอินทรา​ กรุงเทพ
+      </p>
     </div>
 
     <div class='flex gap-2.5 items-center'>
       <div
-        class='rounded-full bg-gray-400 box-border w-8 h-8 md:w-12 md:h-12 grid place-content-center'
+        class='rounded-full bg-gray-400 box-border w-8 h-8 md:w-10 md:h-10 grid place-content-center'
       >
         <MobileIcon className='w-4 h-4 md:w-6 md:h-6' />
       </div>
-      <div class='flex flex-col flex-wrap max-w-[100px]'>
-        <p class='font-bold text-sm md:text-base'>เบอร์โทร</p>
-        <p class='text-gray-700 text-xs md:text-sm'>065-253-9196</p>
-      </div>
+      <p class='text-gray-700 text-xs md:text-sm max-w-[200px]'>065-253-9196</p>
     </div>
   </div>
 </div>
 
 <nav class='hidden md:block bg-gray-300 px-0 md:px-layout'>
-  <ul class='flex flex-col md:flex-row items-center justify-between'>
+  <ul class='flex flex-col md:flex-row items-center text-gray-700 font-medium'>
     <li
       class:list={[
         'px-4 py-5 w-full md:w-fit text-center',
-        { 'bg-gray-700 text-white': pathname === '/' },
+        { 'text-gray-900 font-bold': pathname === '/' },
       ]}
     >
       <a href='/'>หน้าแรก</a>
@@ -83,7 +77,7 @@ const pathname = new URL(Astro.request.url).pathname
     <li
       class:list={[
         'px-4 py-5 w-full md:w-fit text-center',
-        { 'bg-gray-700 text-white': pathname === '/about' },
+        { 'text-gray-900 font-bold': pathname === '/about' },
       ]}
     >
       <a href='/about'>เกี่ยวกับเรา</a>
@@ -91,18 +85,20 @@ const pathname = new URL(Astro.request.url).pathname
     <li
       class:list={[
         'px-4 py-5 w-full md:w-fit text-center',
-        { 'bg-gray-700 text-white': pathname === '/services' },
+        { 'text-gray-900 font-bold': pathname === '/services' },
       ]}
     >
       <a href='/services'>บริการของเรา</a>
     </li>
 
-    <a
-      href='/contact'
-      role='button'
-      class='block text-center px-5 py-2.5 h-12 box-border bg-gray-900 text-white w-full md:w-[120px]'
-      >ติดต่อเรา</a
-    >
+    <div class='ml-auto'>
+      <a
+        href='/contact'
+        role='button'
+        class='block text-center px-5 py-2.5 bg-gray-900 text-white'
+        >ติดต่อเรา</a
+      >
+    </div>
   </ul>
 </nav>
 

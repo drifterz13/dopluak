@@ -10,21 +10,15 @@ interface Props {
 const { title, description, imgSrc } = Astro.props
 ---
 
-<div class='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16'>
-  <Image
-    src={imgSrc}
-    class='object-cover bg-white w-fit lg:w-full'
-    alt='งานกำจัดปลวก'
-    width={300}
-    height={300}
-  />
+<div class='flex flex-col lg:flex-row gap-6 md:gap-16'>
+  <Image src={imgSrc} alt='งานกำจัดปลวก' width={450} height={450} />
 
   <div class='space-y-4'>
     <slot name='icon' />
 
-    <div class='space-y-4'>
-      <div class='text-2xl bold'>{title}</div>
-      <p class='tracking-wide leading-relaxed'>
+    <div class='space-y-4 max-w-lg'>
+      <div class='text-gray-900 text-xl font-bold'>{title}</div>
+      <p class='text-gray-600 leading-8'>
         {description}
       </p>
     </div>

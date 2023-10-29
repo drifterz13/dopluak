@@ -8,7 +8,7 @@ export default {
       padding: {
         layout: '100px',
         'layout-tablet': '50px',
-        'layout-mobile': '25px',
+        'layout-mobile': '40px 24px',
       },
     },
   },

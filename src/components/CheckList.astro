@@ -16,8 +16,10 @@ const { className, items } = Astro.props
         <CheckIcon className='w-6 h-6 shrink-0' />
 
         <div>
-          {item.title ? <div class='font-bold'>{item.title}</div> : null}
-          <p class='text-gray-600'>{item.text}</p>
+          {item.title ? (
+            <div class='text-gray-900 font-bold mb-1'>{item.title}</div>
+          ) : null}
+          <p class='text-gray-600 leading-8'>{item.text}</p>
         </div>
       </li>
     ))

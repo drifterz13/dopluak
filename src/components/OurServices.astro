@@ -1,12 +1,31 @@
 ---
 import SectionHeader from './SectionHeader.astro'
+import ServiceCard from './ServiceCard.astro'
 import BugIcon from './icons/BugIcon.astro'
 import ChatBubbleIcon from './icons/ChatBubbleIcon.astro'
 import ShieldCheckIcon from './icons/ShieldCheckIcon.astro'
 
 const title = 'บริการของเรา'
 const description =
-  'เราคือดูปลวก ผู้นำแนวหน้าในการกำจัดปลวกอันไม่พึงประสงค์ ผู้เชี่ยวชาญของเราพร้อมที่จะให้การปกป้องที่อยู่อาศัยของคุณให้ปราศจากปลวก ให้คุณมั่นใจว่าปลวกจะไม่มารบกวนคุณอีกต่อไป'
+  'เราคือผู้นำในการกำจัดปลวกอันไม่พึงประสงค์ ผู้เชี่ยวชาญของเราพร้อมที่จะให้การปกป้องที่อยู่อาศัยของคุณให้ปราศจากปลวก ให้คุณมั่นใจว่าปลวกจะไม่มารบกวนคุณอีกต่อไป'
+
+const service1 = {
+  title: 'กำจัดปลวก',
+  description:
+    'เราเลือกใช้ผลิตภัณฑ์ทีทันสมัย และเป็นมิตรต่อสิ่งแวดล้อมในการกำจัดปลวกเพื่อความปลอดภัยของครอบครัวคุณ',
+}
+
+const service2 = {
+  title: 'ป้องกันปลวก',
+  description:
+    'นอกเหนือจากการกำจัดปลวก เรายังมีบริการป้องกันปลวกเพื่อทำให้คุณแน่ใจว่าปลวกจะไม่มารบกวนคุณอีกต่อไป',
+}
+
+const service3 = {
+  title: 'ให้คำปรึกษาเรื่องปลวก',
+  description:
+    'ทีมผู้เขี่ยวชาญจากทีมดูปลวกพร้อมให้คำปรึกษาแนะนำ และเสนอทางออกสำหรับปัญหาเรื่องปลวกของคุณ',
+}
 ---
 
 <SectionHeader className='text-center mx-auto'>
@@ -14,40 +33,16 @@ const description =
   <Fragment slot='description'>{description}</Fragment>
 </SectionHeader>
 
-<div class='flex flex-col lg:grid lg:grid-cols-3 gap-6 mt-16'>
-  <div class='px-8 py-11 space-y-4 bg-zinc-700 text-white'>
-    <BugIcon className='w-8 h-8' />
+<div class='flex flex-col lg:grid lg:grid-cols-3 gap-6 mt-6 md:mt-16'>
+  <ServiceCard title={service1.title} description={service1.description}>
+    <BugIcon className='w-8 h-8' slot='icon' />
+  </ServiceCard>
 
-    <div class='space-y-4'>
-      <div class='text-2xl bold'>กำจัดปลวก</div>
-      <p>
-        เราเลือกใช้ผลิตภัณฑ์ทีทันสมัย
-        และเป็นมิตรต่อสิ่งแวดล้อมในการกำจัดปลวกเพื่อความปลอดภัยของครอบครัวคุณ
-      </p>
-    </div>
-  </div>
+  <ServiceCard title={service2.title} description={service2.description}>
+    <ShieldCheckIcon className='w-8 h-8' slot='icon' />
+  </ServiceCard>
 
-  <div class='px-8 py-11 space-y-4 bg-zinc-700 text-white'>
-    <ShieldCheckIcon className='w-8 h-8' />
-
-    <div class='space-y-4'>
-      <div class='text-2xl bold'>ป้องกันปลวก</div>
-      <p>
-        นอกเหนือจากการกำจัดปลวก
-        เรายังมีบริการป้องกันปลวกเพื่อทำให้คุณแน่ใจว่าปลวกจะไม่มารบกวนคุณอีกต่อไป
-      </p>
-    </div>
-  </div>
-
-  <div class='px-8 py-11 space-y-4 bg-zinc-700 text-white'>
-    <ChatBubbleIcon className='w-8 h-8' />
-
-    <div class='space-y-4'>
-      <div class='text-2xl bold'>ให้คำปรึกษาเรื่องปลวก</div>
-      <p>
-        ทีมผู้เขี่ยวชาญจากทีมดูปลวกพร้อมให้คำปรึกษาแนะนำ
-        และเสนอทางออกสำหรับปัญหาเรื่องปลวกของคุณ
-      </p>
-    </div>
-  </div>
+  <ServiceCard title={service3.title} description={service3.description}>
+    <ChatBubbleIcon className='w-8 h-8' slot='icon' />
+  </ServiceCard>
 </div>
