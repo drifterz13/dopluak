@@ -6,7 +6,7 @@ import SectionHeader from './SectionHeader.astro'
 const title = 'บริการที่ดีที่สุดในราคาที่คุ้มค่าที่สุด'
 
 const basicFeatures = [
-  { text: 'สำรวจรังปลวกอย่างระเอียด' },
+  { text: 'สำรวจปลวกอย่างละเอียด' },
   { text: 'กำจัดปลวกภายในบ้าน' },
 ]
 
@@ -14,7 +14,7 @@ const standardFeatures = [
   ...basicFeatures,
   { text: 'กำจัดปลวกภายนอกบ้าน' },
   { text: 'บริการฉีดปลวกย้ำทุก 3 เดือน' },
-  { text: 'ป้องกันปลวก' },
+  { text: 'บริการฉีดป้องกันปลวก' },
 ]
 ---
 
@@ -23,13 +23,13 @@ const standardFeatures = [
 </SectionHeader>
 
 <div class='flex flex-col md:flex-row gap-6 mt-16 justify-center items-center'>
-  <PricingCard planName='เริ่มต้น' price={3500}>
+  <PricingCard planName='เริ่มต้น' price='3,500'>
     <div slot='features'>
       <CheckList items={basicFeatures} />
     </div>
   </PricingCard>
 
-  <PricingCard planName='มาตรฐาน' price={5500} recommended>
+  <PricingCard planName='มาตรฐาน' price='5,500' recommended>
     <div slot='features'>
       <CheckList items={standardFeatures} />
     </div>
