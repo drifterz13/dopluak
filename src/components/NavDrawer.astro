@@ -1,5 +1,23 @@
 <div class='nav-drawer bg-white z-20'>
-  <ul class='flex flex-col px-8 py-6 gap-y-2 border-b border-zinc-500'>
+  <div class='pl-8 h-16 box-border w-full flex justify-end'>
+    <button class='close-btn py-2 px-6'>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 24 24'
+        stroke-width='1.5'
+        stroke='currentColor'
+        class='w-8 h-8'
+      >
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          d='M6 18L18 6M6 6l12 12'></path>
+      </svg>
+    </button>
+  </div>
+
+  <ul class='flex flex-col px-8 pb-6 gap-y-2 border-b border-zinc-500'>
     <li class='py-2 w-full'>
       <a href='/'>หน้าแรก</a>
     </li>
@@ -15,7 +33,7 @@
     <a
       href='/contact'
       role='button'
-      class='block text-center px-5 py-2.5 box-border bg-gray-900 text-white'
+      class='block text-center px-5 py-4 box-border bg-gray-900 text-white'
       >ติดต่อเรา</a
     >
   </div>
@@ -48,11 +66,11 @@
       display: block;
       position: fixed;
       right: -100%;
-      top: 64px;
+      top: 0px;
       flex-direction: column;
-      width: 80%;
+      width: 100%;
       transition: 0.3s;
-      height: calc(100vh - 64px);
+      height: 100vh;
     }
 
     .nav-drawer.active {

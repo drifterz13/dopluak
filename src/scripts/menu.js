@@ -1,11 +1,13 @@
 const hamburger = document.querySelector('.hamburger')
 const navDrawer = document.querySelector('.nav-drawer')
+const closeBtn = document.querySelector('.nav-drawer .close-btn')
 const drawerOverlay = document.querySelector('.drawer-overlay')
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active')
+function toggleMenu() {
   navDrawer.classList.toggle('active')
   drawerOverlay.classList.toggle('active')
-
   document.body.classList.toggle('scroll')
-})
+}
+
+hamburger.addEventListener('click', toggleMenu)
+closeBtn.addEventListener('click', toggleMenu)
