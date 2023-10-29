@@ -11,7 +11,13 @@ const { title, description, imgSrc } = Astro.props
 ---
 
 <div class='flex flex-col lg:flex-row gap-6 md:gap-16'>
-  <Image src={imgSrc} alt='งานกำจัดปลวก' width={450} height={450} />
+  <Image
+    src={imgSrc}
+    alt='งานกำจัดปลวก'
+    width={450}
+    height={450}
+    loading='lazy'
+  />
 
   <div class='space-y-4'>
     <slot name='icon' />

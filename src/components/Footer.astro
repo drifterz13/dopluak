@@ -8,7 +8,7 @@ import MobileIcon from './icons/MobileIcon.astro'
 <div class='space-y-6'>
   <div class='grid grid-cols-1 md:grid-cols-2'>
     <div class='flex flex-col w-full md:w-[263px] max-md:items-center'>
-      <Image src={logo} alt='Do Pluak logo' width={80} />
+      <Image src={logo} alt='Do Pluak logo' width={80} loading='lazy' />
 
       <div class='mt-2 max-md:text-center'>
         <span class='text-gray-900 font-bold'>Do Pluak</span>
@@ -22,9 +22,9 @@ import MobileIcon from './icons/MobileIcon.astro'
       <div class='flex flex-col'>
         <div class='flex flex-col items-start'>
           <div class='text-gray-900 text-base font-bold'>สำรวจเพิ่มเติม</div>
-          <a href='/about' class='text-gray-600 mt-4'>เกี่ยวกับเรา</a>
-          <a href='/services' class='text-gray-600 mt-4'>บริการของเรา</a>
-          <a href='/contact' class='text-gray-600 mt-4'>ติดต่อเรา</a>
+          <a href='/about/' class='text-gray-600 mt-4'>เกี่ยวกับเรา</a>
+          <a href='/services/' class='text-gray-600 mt-4'>บริการของเรา</a>
+          <a href='/contact/' class='text-gray-600 mt-4'>ติดต่อเรา</a>
         </div>
       </div>
       <div class='flex flex-col gap-6'>
